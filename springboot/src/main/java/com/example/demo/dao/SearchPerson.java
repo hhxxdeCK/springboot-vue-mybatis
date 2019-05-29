@@ -1,9 +1,12 @@
 package com.example.demo.dao;
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.regex.*;
+@Slf4j
 public class SearchPerson {
     private String CHECKSQL ="/\\w*((\\%27)|(\\’))((\\%6F)|o|(\\%4F))((\\%72)|r|(\\%52))/ix";
     public String searchPerson(String name, String source, String dpt) {
-        System.out.println("正在执行多重查询方法");
+        log.info("正在执行多重查询方法");
         Pattern.matches(CHECKSQL,name);
         Pattern.matches(CHECKSQL,source);
         Pattern.matches(CHECKSQL,dpt);

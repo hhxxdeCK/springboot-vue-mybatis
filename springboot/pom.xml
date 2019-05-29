@@ -141,11 +141,6 @@
             <artifactId>json-smart</artifactId>
             <version>2.2.1</version>
         </dependency>
-        <!-- hsqldb -->
-        <!--<dependency>
-            <groupId>org.hsqldb</groupId>
-            <artifactId>hsqldb</artifactId>
-        </dependency>-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -170,6 +165,11 @@
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>
             <version>1.5.20</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>1.7.26</version>
         </dependency>
     </dependencies>
     <properties>
