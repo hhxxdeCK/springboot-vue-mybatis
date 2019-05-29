@@ -10,7 +10,8 @@ import org.springframework.stereotype.Service;
 public class UserService {
     @Autowired
     private UserDao userdao;
-    public User get(String username,String password){
-        return userdao.login(username,password);
+
+    public User get(String username, String password) {
+        return userdao.login(username, password);
     }
 }

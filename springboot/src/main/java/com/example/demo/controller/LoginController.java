@@ -1,4 +1,5 @@
 package com.example.demo.controller;
+
 import com.example.demo.entity.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +12,18 @@ import org.springframework.web.util.HtmlUtils;
 public class LoginController {
     @Autowired
     UserService userService;
+
     @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/api/login", method = RequestMethod.POST, produces = "application/json; charset=UTF-8")
     @ResponseBody
     public Result login(@RequestBody User requestUser) {
         String username = requestUser.getUsername();
         username = HtmlUtils.htmlEscape(username);
-        User u= userService.get(username,requestUser.getPassword());
-        if(null == u) {
+        User u = userService.get(username, requestUser.getPassword());
+        if (null == u) {
             System.out.println("error");
             return new Result(400);
-        }else {
+        } else {
             return new Result(200);
         }
     }
